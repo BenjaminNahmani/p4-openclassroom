@@ -1,0 +1,44 @@
+<?=$header?>
+
+    <section id="main_pic">
+        <div class="wrapper">
+            <div class="content">
+                <h1>Aller simple en Alaska</h1>
+                <p class=subtitle>Un roman sur l'Alaska</p>
+            </div>
+        </div>
+    </section>
+
+<div class="container">
+
+    <?php foreach ($data["billets"] as $billet):?>
+
+        <div class="card">
+            <div class="card-body">
+
+                <h5 class="card-title"><?php echo $billet->getName() ?></h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text"><?php echo $billet->getText()?></p>
+                <button id="new-comment"  class="btn btn-primary"><i class="fas fa-comment-dots"></i></button>
+                <button id="view_comment" class="btn btn-primary btn-comOn" data-commentaires-id="#com_card_<?= $billet->getId()?>"><i class="far fa-eye"></i></button>
+                x
+            </div>
+        </div>
+
+        <?php foreach ($billet->getCommentaires() as $com):?>
+
+                <div class="card com_card" id="com_card_<?= $billet->getId()?>">
+                    <div class="card-body">
+                        <p class="card-text"><?= $com->getText()?></p>
+
+                        <button id="signal" data-id="<?php echo $com->getId()?>" class="btn btn-danger"><i class="fas fa-exclamation-triangle"></i></button>
+                    </div>
+                </div>
+        <?php endforeach;?>
+
+    <?php endforeach;?>
+</div>
+
+
+
+<?=$footer?>
