@@ -8,6 +8,7 @@ use Blog\Controller\BilletController;
 use Blog\Controller\HomeController;
 use Blog\Controller\CommentaireController;
 use Blog\Controller\LoginController;
+use Blog\Model\Billet;
 
 
 //var_dump($_SERVER);
@@ -55,6 +56,10 @@ switch ($path)
         $controller=new BilletController();
         $controller->delete();
         break;
+    case "/billet":
+        $controller=new BilletController();
+        $controller->show();
+        break;
 
         //Commentaire
     case "/admin/commentaire/create":
@@ -83,7 +88,6 @@ switch ($path)
         break;
 
 
-
         //LOGIN
     case "/admin/logout/":
         $controller=new LoginController();
@@ -93,7 +97,6 @@ switch ($path)
         $controller=new LoginController();
         $controller->login();
         break;
-
 
 
     default:

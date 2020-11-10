@@ -82,6 +82,21 @@ class CommentaireDao extends DAO {
         $request=self::getCnx()->prepare("UPDATE commentaire SET signaler=1,dateSignaler='".date("Y-m-d H:i:s")."' WHERE id=?");
         return $request->execute([$id]);
     }
+    //Utiliser requete préparer (fail de sécurité ici)
+    public function getCommentsFromBillet($id)
+    {
+        $request=self::getCnx()->query("SELECT * FROM commentaire WHERE billet=".$id);
+
+        $result=$request->fetchAll();
+
+        $commentaires=[];
+
+        foreach ($result as $value2)
+        {
+            $commentaires[]=new Commentaire($value2["id"],$value2["text"],$value2["billet"],$value2["signaler"]);
+        }
+        return $commentaires;
+    }
 
 
 

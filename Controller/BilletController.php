@@ -5,6 +5,7 @@ use Blog\DAO\BilletDao;
 use Blog\Framework\Controller;
 use Blog\Model\Billet;
 use Blog\Framework\View;
+use Blog\Model\Commentaire;
 
 
 class BilletController extends Controller
@@ -51,6 +52,8 @@ class BilletController extends Controller
     }
 
 
+
+
     public function update()
     {
         $this->redirectIfNotConnected();
@@ -71,6 +74,12 @@ class BilletController extends Controller
         $view->render(["billet"=>$billet]);
     }
 
+    public function show(){
+        $billet=BilletDao::get($_GET["id"], true);
+        $view = new View("billet/show");
+        $view->render(["billet"=>$billet]);
+
+    }
 
 
 }

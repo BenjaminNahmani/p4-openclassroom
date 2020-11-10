@@ -69,4 +69,9 @@ class Billet{
     {
         return $this->commentaires;
     }
+
+    public function setCommentaires(array $commentaires)
+    {
+        $this->commentaires = $commentaires;
+    }
 }

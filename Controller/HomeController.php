@@ -2,6 +2,7 @@
 namespace Blog\Controller;
 
 use Blog\DAO\BilletDao;
+use Blog\DAO\CommentaireDao;
 use Blog\Framework\Controller;
 use Blog\Framework\View;
 

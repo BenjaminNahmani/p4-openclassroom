@@ -57,30 +57,27 @@ class BilletDao extends DAO{
 
         foreach ($result as $value)
         {
-            $request=self::getCnx()->query("SELECT * FROM commentaire WHERE billet= ".$value["id"]);
-
-            $result=$request->fetchAll();
-
-            $commentaires=[];
-
-            foreach ($result as $value2)
-            {
-                $commentaires[]=new Commentaire($value2["id"],$value2["text"],$value2["billet"],$value2["signaler"]);
-            }
-
-            $billet[]=new Billet($value["id"],$value["name"],$value["text"],$commentaires);
+            $commentDao = new CommentaireDao();
+            $billet[]=new Billet($value["id"],$value["name"],$value["text"],$commentDao->getCommentsFromBillet($value['id']));
         }
 
         return $billet;
     }
 
-    public static function get($id)
+    public static function get($id, $withComs = false)
     {
         $request=self::getCnx()->prepare("SELECT * FROM billet WHERE id=?");
         $request->execute([$id]);
         $result=$request->fetch();
 
         $billet=new Billet($result["id"],$result["name"],$result["text"]);
+
+
+        if($withComs){
+        $commentDao = new CommentaireDao();
+        $billet->setCommentaires($commentDao->getCommentsFromBillet($result['id']));
+
+        }
 
         return $billet;
     }

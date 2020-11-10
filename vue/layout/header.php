@@ -22,6 +22,7 @@
                 <ul id="list_nav">
 
                     <li><a href="/home" class="button">Acceuil</a></li>
+                    <li><a href="#" class="button">Episodes</a></li>
                     <li><a href="/admin/billet/liste" class="button">Espace admin</a> </li>
 
                 </ul>
