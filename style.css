@@ -1,159 +1,153 @@
 /* ---------------------------------- */
 /* ------------- NAVBAR ------------- */
 /* ---------------------------------- */
-
-.navbar{
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    top: 0;
-    z-index: 9999;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 1900px;
-    background-color: #141A2A;
-    box-shadow: 0 5px 2px 2px rgba(0, 0, 0, 0.1);
-    transition: all 0.25s ease-in-out;
+header {
+  margin-bottom: 20px;
+}
+#main_logo {
+  width: 50px;
+  border-radius: 50%;
 }
 
-/* .navbar.scroll{
-    padding: 0.5rem 1rem;
-    background-color: #141A2A;
-} */
-
-#logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70px;
-    height: 70px; 
-}
-
-#img_logo{
-    width: 100%;
-    border-radius: 50%;
-}
-
-#list_nav{
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    margin-top: 16px;
-}
-
-#list_nav li a{
-    padding: 30px 15px;
-    text-decoration: none;
-}
-
-#list_nav li a:hover{
-    background-color: white;
-    color: #141A2A;
-    border-radius: 20%;
-    transition: all 0.3s ease-in-out;
-}
-
-.button{
-    color: white;
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  top: 0;
+  /*     background-color: #141A2A; */
 }
 
 /* ---------------------------------- */
 /* -------------- MAIN -------------- */
 /* ---------------------------------- */
-#main_pic, #main_pic h1{
-    margin: 0px;
-    padding: 0px;
+#main_pic h1 {
+  margin: 0px;
+  padding: 0px;
 }
 
-#main_pic{
+#main_pic {
+  height: 400px;
+  margin-bottom: 25px;
+  background: url(image/main_pic.jpg) no-repeat center center;
+  background-size: cover;
+  color: white;
+  margin: 0px;
+  padding: 2px;
+}
+
+@media screen and (min-width: 540px) {
+  /* TABLETTE */
+
+  /* ---------------------------------- */
+  /* ------------- NAVBAR ------------- */
+  /* ---------------------------------- */
+
+  .navbar {
+    justify-content: space-around;
+    max-width: 1900px;
+    box-shadow: 0 5px 2px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.25s ease-in-out;
+  }
+
+  /* .navbar.scroll{
+    padding: 0.5rem 1rem;
+    background-color: #141A2A;
+} */
+/* 
+  #list_nav li a:hover {
+    background-color: white;
+    color: #141a2a;
+    border-radius: 20%;
+    transition: all 0.3s ease-in-out;
+  } */
+
+  /* ---------------------------------- */
+  /* -------------- MAIN -------------- */
+  /* ---------------------------------- */
+   #main_pic{
     height: 975px;
-    margin-bottom: 25px;
-    background: url(image/main_pic.jpg)  no-repeat center center;
-    background-size: cover;
-    color: white;
 }
 
-.wrapper{
+  .wrapper {
     display: table;
     width: 100%;
     height: 100%;
-}
+  }
 
-.content{
+  .content {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
     text-shadow: 1px 1px 10px #000000;
-}
+  }
 
-/* ---------------------------------- */
-/* ------------- BILLET ------------- */
-/* ---------------------------------- */
-.card-text-right{
+  /* ---------------------------------- */
+  /* ------------- BILLET ------------- */
+  /* ---------------------------------- */
+  .card-text-right {
     text-align: right;
-}
-/* ---------------------------------- */
-/* ---------- COMMENTAIRES ---------- */
-/* ---------------------------------- */
+  }
+  /* ---------------------------------- */
+  /* ---------- COMMENTAIRES ---------- */
+  /* ---------------------------------- */
 
-.container{
+  .container {
     display: flex;
     flex-direction: column;
     margin-top: 30px;
-}
+  }
 
-.container_article{
+  .container_article {
     display: flex;
     flex-direction: column;
     margin-top: 130px;
-}
+  }
 
-.card{
+  .card {
     border: 1px solid black;
     height: 100%;
     width: 100%;
+  }
 
-} 
-
-.com_card{
+  .com_card {
     display: none;
-}
+  }
 
-/* ---------------------------------- */
-/* -------- COM ARTICLE PAGE -------- */
-/* ---------------------------------- */
+  /* ---------------------------------- */
+  /* -------- COM ARTICLE PAGE -------- */
+  /* ---------------------------------- */
 
-.form_com{
+  .form_com {
     display: flex;
     flex-direction: column;
     width: 80%;
     padding: 10px 10px 10px 10px;
-}
+  }
 
-.btn-submit, .btn-success{
+  .btn-submit,
+  .btn-success {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-}
+  }
 
-
-/* ---------------------------------- */
-/* -------- FORM LOGIN ADMIN -------- */
-/* ---------------------------------- */
-.container_login{
+  /* ---------------------------------- */
+  /* -------- FORM LOGIN ADMIN -------- */
+  /* ---------------------------------- */
+  .container_login {
     margin-top: 130px;
-}
+  }
 
-
-/* ---------------------------------- */
-/* ------------- FOOTER ------------- */
-/* ---------------------------------- */
-footer{
+  /* ---------------------------------- */
+  /* ------------- FOOTER ------------- */
+  /* ---------------------------------- */
+  footer {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
-    background-color: #141A2A;
+    background-color: #141a2a;
     color: white;
     font-size: 20px;
+  }
 }
