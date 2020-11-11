@@ -118,3 +118,20 @@
 .com_card{
     display: none;
 }
+
+/* ---------------------------------- */
+/* -------- COM ARTICLE PAGE -------- */
+/* ---------------------------------- */
+
+.form_com{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 10px 10px 10px 10px;
+}
+
+.btn-submit{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}

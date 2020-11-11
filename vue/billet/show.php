@@ -9,10 +9,7 @@
                 <div class="card-body">
 
                     <h5 class="card-title"><a href="/billet?id=<?= $billet->getId()?>"><?= $billet->getName() ?></a></h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                     <p class="card-text"><?= $billet->getText()?></p>
-                    <button id="new-comment"  class="btn btn-primary"><i class="fas fa-comment-dots"></i></button>
-                    <button id="view_comment" class="btn btn-primary btn-comOn" data-commentaires-id="#com_card_<?= $billet->getId()?>"><i class="far fa-eye"></i></button>
 
                 </div>
             </div>
@@ -41,7 +38,30 @@
             </div>
         <?php endforeach;?>
 
-    <!-- form pour laisser com -->
     </section>
+
+<section class="form_com">
+    <form>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Nom</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Votre nom">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Prénom</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Commentaire</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Ecrivez votre commentaire ici"></textarea>
+        </div>
+            
+        <div class="btn-submit">
+            <input class="btn btn-primary" type="submit" value="Envoyer">
+        </div>
+    </form>
+</section>
 
 <?= $footer?>
