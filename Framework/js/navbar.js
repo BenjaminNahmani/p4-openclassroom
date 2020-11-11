@@ -1,4 +1,4 @@
- const nav = document.querySelector('.navbar');
+/*  const nav = document.querySelector('.navbar');
 
 window.addEventListener('scroll', ()=> {
     if(window.scrollY > 183){
@@ -7,3 +7,4 @@ window.addEventListener('scroll', ()=> {
         nav.classList.remove('scroll');
     }
 })
+ */

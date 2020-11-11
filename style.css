@@ -11,15 +11,15 @@
     justify-content: space-around;
     width: 100%;
     max-width: 1900px;
-    background-color: transparent;
+    background-color: #141A2A;
     box-shadow: 0 5px 2px 2px rgba(0, 0, 0, 0.1);
     transition: all 0.25s ease-in-out;
 }
 
-.navbar.scroll{
+/* .navbar.scroll{
     padding: 0.5rem 1rem;
     background-color: #141A2A;
-}
+} */
 
 #logo{
     display: flex;
@@ -130,8 +130,30 @@
     padding: 10px 10px 10px 10px;
 }
 
-.btn-submit{
+.btn-submit, .btn-success{
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+}
+
+
+/* ---------------------------------- */
+/* -------- FORM LOGIN ADMIN -------- */
+/* ---------------------------------- */
+.container_login{
+    margin-top: 130px;
+}
+
+
+/* ---------------------------------- */
+/* ------------- FOOTER ------------- */
+/* ---------------------------------- */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #141A2A;
+    color: white;
+    font-size: 20px;
 }
