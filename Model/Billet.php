@@ -58,6 +58,14 @@ class Billet{
     }
 
     /**
+     * @param $text
+     */
+    public function getExcerptText($text){
+        return $this->text = substr($text, 0, 250) . '...';
+
+    }
+
+    /**
      * @param mixed $text
      */
     public function setText($text)

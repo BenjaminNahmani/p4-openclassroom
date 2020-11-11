@@ -18,7 +18,7 @@
 
                 <h5 class="card-title"><a href="/billet?id=<?= $billet->getId()?>"><?= $billet->getName() ?></a></h5>
                 <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text"><?= $billet->getText()?></p>
+                <p class="card-text"><?= $billet->getExcerptText($billet->getText())?></p>
                 <button id="new-comment"  class="btn btn-primary"><i class="fas fa-comment-dots"></i></button>
                 <button id="view_comment" class="btn btn-primary btn-comOn" data-commentaires-id="#com_card_<?= $billet->getId()?>"><i class="far fa-eye"></i></button>
 
