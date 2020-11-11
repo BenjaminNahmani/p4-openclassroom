@@ -61,7 +61,7 @@ class Billet{
      * @param $text
      */
     public function getExcerptText($text){
-        return $this->text = substr($text, 0, 250) . '...';
+        return $this->text = substr($text, 0, 500) . '...';
 
     }
 
@@ -82,4 +82,6 @@ class Billet{
     {
         $this->commentaires = $commentaires;
     }
+
+
 }

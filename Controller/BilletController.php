@@ -40,7 +40,6 @@ class BilletController extends Controller
         header("location:liste");
     }
 
-
     public function liste()
     {
         $this->redirectIfNotConnected();

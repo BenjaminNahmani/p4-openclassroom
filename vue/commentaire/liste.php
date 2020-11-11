@@ -2,9 +2,9 @@
 include_once "vue/menu/menu.php";
 ?>
 
-<h2>Liste des Commmentaire pour le billet <?php echo $billet->getName() ?></h2>
+<h2>Liste des Commmentaire pour le billet <?= $billet->getName() ?></h2>
 
-<a class="btn btn-success" href="create?id=<?php echo $billet->getId() ?>">créer un Commentaire</a>
+<a class="btn btn-success" href="create?id=<?= $billet->getId() ?>">créer un Commentaire</a>
 
 <table class="table">
     <thead class="thead-dark">
@@ -19,12 +19,12 @@ include_once "vue/menu/menu.php";
     <?php foreach ($coms as $com):?>
 
         <tr>
-            <td><?php echo $com->getId() ?></td>
-            <td><?php echo $com->getText() ?></td>
-            <td><?php echo $com->getSignaler()==true?"Oui":"Non"; ?></td>
+            <td><?= $com->getId() ?></td>
+            <td><?= $com->getText() ?></td>
+            <td><?= $com->getSignaler()==true?"Oui":"Non"; ?></td>
             <td>
-                <a href="update?id=<?php echo $com->getId() ?>" class="btn btn-warning text-light"><i class="fa fa-edit"></i></a>
-                <a href="delete?id=<?php echo $com->getId() ?>&billet=<?php echo $billet->getId() ?>" class="btn btn-danger text-light"><i class="fa fa-trash"></i></a>
+                <a href="update?id=<?= $com->getId() ?>" class="btn btn-warning text-light"><i class="fa fa-edit"></i></a>
+                <a href="delete?id=<?= $com->getId() ?>&billet=<?= $billet->getId() ?>" class="btn btn-danger text-light"><i class="fa fa-trash"></i></a>
             </td>
         </tr>
 

@@ -17,12 +17,12 @@ include_once "vue/menu/menu.php";
     <?php foreach ($coms as $com):?>
 
         <tr>
-            <td><?php echo $com->getId() ?></td>
-            <td><?php echo $com->getText() ?></td>
-            <td><?php echo $com->getBillet()->getName() ?></td>
+            <td><?= $com->getId() ?></td>
+            <td><?= $com->getText() ?></td>
+            <td><?= $com->getBillet()->getName() ?></td>
             <td>
-                <a href="/admin/commentaire/update?id=<?php echo $com->getId() ?>" class="btn btn-warning text-light"><i class="fa fa-edit"></i></a>
-                <a href="/admin/commentaire/delete?id=<?php echo $com->getId() ?>" class="btn btn-danger text-light"><i class="fa fa-trash"></i></a>
+                <a href="/admin/commentaire/update?id=<?= $com->getId() ?>" class="btn btn-warning text-light"><i class="fa fa-edit"></i></a>
+                <a href="/admin/commentaire/delete?id=<?= $com->getId() ?>" class="btn btn-danger text-light"><i class="fa fa-trash"></i></a>
             </td>
         </tr>
 

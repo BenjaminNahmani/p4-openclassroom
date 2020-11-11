@@ -30,9 +30,6 @@
 
     </div>
 
-
-     <?php echo $billet->getName(); ?>
-
         <?php foreach ($billet->getCommentaires() as $com):?>
 
             <div class="card com_card" id="com_card_<?= $billet->getId()?>">
