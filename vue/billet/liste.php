@@ -36,7 +36,7 @@ include_once "vue/menu/menu.php";
     </thead>
     <tbody>
 
-<!--    TODO remplacer les data par $billets -->
+<!--    TODO remplacer les data par $billets un peu partout dans les vues -->
     <?php foreach ($data["billets"] as $b):?>
 
         <tr>
