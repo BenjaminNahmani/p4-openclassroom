@@ -14,8 +14,11 @@
                 </div>
             </div>
 
+            <h2 id="com_zone_title"> Zone des commentaires</h2>
+
             <?php foreach ($billet->getCommentaires() as $com):?>
 
+            <div class="com_wrapper">
                 <div class="card com_card" id="com_card_<?= $billet->getId()?>">
                     <div class="card-body">
                         <p class="card-text"><?= $com->getText()?></p>
@@ -23,22 +26,13 @@
                         <button id="signal" data-id="<?= $com->getId()?>" class="btn btn-danger"><i class="fas fa-exclamation-triangle"></i></button>
                     </div>
                 </div>
+            </div>
+
             <?php endforeach;?>
 
     </div>
 
-        <?php foreach ($billet->getCommentaires() as $com):?>
-
-            <div class="card com_card" id="com_card_<?= $billet->getId()?>">
-                <div class="card-body">
-                    <p class="card-text"><?= $com->getText()?></p>
-
-                    <button id="signal" data-id="<?= $com->getId()?>" class="btn btn-danger"><i class="fas fa-exclamation-triangle"></i></button>
-                </div>
-            </div>
-        <?php endforeach;?>
-
-    </section>
+</section>
 
 <section class="form_com">
     <form>

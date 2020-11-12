@@ -58,9 +58,6 @@ header {
   /* ---------- COMMENTAIRES ---------- */
   /* ---------------------------------- */
 
-.com_card {
-  display: none;
-}
 
 .container {
   display: flex;
@@ -69,10 +66,11 @@ header {
 }
 
 .card {
-  border: 1px solid black;
   height: 100%;
   width: 100%;
-  border: 1px solid #c9c9c9;
+  margin: 10px;
+  border: none;
+  color: black;
 }
 
   /* ---------------------------------- */
@@ -90,6 +88,19 @@ footer {
 /* ---------------------------------- */
 /*             PAGE ARTICLE           */
 /* ---------------------------------- */
+
+#com_zone_title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.com_wrapper{
+  border: 1px solid #c9c9c9;
+
+}
+
 .form_com {
   display: flex;
   flex-direction: column;
@@ -118,7 +129,11 @@ footer {
   /* ---------------------------------- */
   
   #main_pic{
+    position: relative;
     min-height: 975px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
   .wrapper {
@@ -133,29 +148,15 @@ footer {
     vertical-align: middle;
     text-shadow: 1px 1px 10px #000000;
   }
+
+
+  .card_home{
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+  }
 }
-  /* ---------------------------------- */
-  /* ------------- BILLET ------------- */
-  /* ---------------------------------- */
- /* .card-text-right {
-    text-align: right;
-  }
-  /* ---------------------------------- */
-  /* ---------- COMMENTAIRES ---------- */
-  /* ---------------------------------- */
-
- /* 
-
-  .container_article {
-    display: flex;
-    flex-direction: column;
-    margin-top: 130px;
-  }
-
-  /* ---------------------------------- */
-  /* -------- COM ARTICLE PAGE -------- */
-  /* ---------------------------------- */
-
 
   /* ---------------------------------- */
   /* -------- FORM LOGIN ADMIN -------- */

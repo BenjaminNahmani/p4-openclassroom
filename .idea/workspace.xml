@@ -27,6 +27,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3a1973d9-db65-4c67-a20d-1df74212f80d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/billet/show.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/billet/show.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/home/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/home/home.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +78,7 @@
       <workItem from="1605131126535" duration="1796000" />
       <workItem from="1605132938100" duration="220000" />
       <workItem from="1605216882337" duration="429000" />
+      <workItem from="1605222407793" duration="1228000" />
     </task>
     <servers />
   </component>
