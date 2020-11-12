@@ -1,4 +1,8 @@
 /* ---------------------------------- */
+/*            PAGE HOME.PHP           */
+/* ---------------------------------- */
+
+/* ---------------------------------- */
 /* ------------- NAVBAR ------------- */
 /* ---------------------------------- */
 header {
@@ -26,46 +30,95 @@ header {
 }
 
 #main_pic {
-  height: 400px;
-  margin-bottom: 25px;
+  height: 250px;
+  max-height: 400px;
   background: url(image/main_pic.jpg) no-repeat center center;
   background-size: cover;
-  color: white;
   margin: 0px;
+  margin-bottom: 25px;
   padding: 2px;
+  color: white;
 }
 
-@media screen and (min-width: 540px) {
-  /* TABLETTE */
+
+.wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  text-shadow: 1px 1px 10px #000000;
+}
 
   /* ---------------------------------- */
-  /* ------------- NAVBAR ------------- */
+  /* ---------- COMMENTAIRES ---------- */
   /* ---------------------------------- */
 
-  .navbar {
-    justify-content: space-around;
-    max-width: 1900px;
-    box-shadow: 0 5px 2px 2px rgba(0, 0, 0, 0.1);
-    transition: all 0.25s ease-in-out;
+.com_card {
+  display: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.card {
+  border: 1px solid black;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #c9c9c9;
+}
+
+  /* ---------------------------------- */
+  /* ------------- FOOTER ------------- */
+  /* ---------------------------------- */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #141a2a;
+  color: white;
+}
+
+/* ---------------------------------- */
+/*             PAGE ARTICLE           */
+/* ---------------------------------- */
+.form_com {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 10px 10px 10px;
+}
+
+.btn-submit,
+.btn-success {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+@media screen and (min-width: 500px) {/* TAB */
+  
+    #main_pic{
+      height: 400px;
+      max-height: 600px;
+    }
   }
 
-  /* .navbar.scroll{
-    padding: 0.5rem 1rem;
-    background-color: #141A2A;
-} */
-/* 
-  #list_nav li a:hover {
-    background-color: white;
-    color: #141a2a;
-    border-radius: 20%;
-    transition: all 0.3s ease-in-out;
-  } */
-
+@media screen and (min-width: 990px) {/* ORDI */
   /* ---------------------------------- */
   /* -------------- MAIN -------------- */
   /* ---------------------------------- */
-   #main_pic{
-    height: 975px;
+  
+  #main_pic{
+    min-height: 975px;
 }
 
   .wrapper {
@@ -80,22 +133,18 @@ header {
     vertical-align: middle;
     text-shadow: 1px 1px 10px #000000;
   }
-
+}
   /* ---------------------------------- */
   /* ------------- BILLET ------------- */
   /* ---------------------------------- */
-  .card-text-right {
+ /* .card-text-right {
     text-align: right;
   }
   /* ---------------------------------- */
   /* ---------- COMMENTAIRES ---------- */
   /* ---------------------------------- */
 
-  .container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 30px;
-  }
+ /* 
 
   .container_article {
     display: flex;
@@ -103,51 +152,17 @@ header {
     margin-top: 130px;
   }
 
-  .card {
-    border: 1px solid black;
-    height: 100%;
-    width: 100%;
-  }
-
-  .com_card {
-    display: none;
-  }
-
   /* ---------------------------------- */
   /* -------- COM ARTICLE PAGE -------- */
   /* ---------------------------------- */
 
-  .form_com {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    padding: 10px 10px 10px 10px;
-  }
-
-  .btn-submit,
-  .btn-success {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
 
   /* ---------------------------------- */
   /* -------- FORM LOGIN ADMIN -------- */
   /* ---------------------------------- */
-  .container_login {
+ /* .container_login {
     margin-top: 130px;
   }
 
-  /* ---------------------------------- */
-  /* ------------- FOOTER ------------- */
-  /* ---------------------------------- */
-  footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    background-color: #141a2a;
-    color: white;
-    font-size: 20px;
-  }
+
 }
