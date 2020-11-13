@@ -5,14 +5,18 @@ namespace Blog\Model;
 class Commentaire{
 
     private $id;
+    private $nom;
+    private $prenom;
     private $text;
     private $billet;
     private $signaler;
 
-    public function __construct($id,$text,$billet,$signaler)
+    public function __construct($id,$nom,$prenom,$text,$billet,$signaler)
     {
         $this->id=$id;
         $this->text=$text;
+        $this->nom=$nom;
+        $this->prenom=$prenom;
         $this->billet=$billet;
         $this->signaler=$signaler;
     }
@@ -47,6 +51,38 @@ class Commentaire{
     public function setText($text)
     {
         $this->text = $text;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * @param mixed $text
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
+
+    /**
+     * @param mixed $text
+     */
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
     }
 
     /**

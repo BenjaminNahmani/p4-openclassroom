@@ -6,17 +6,17 @@ use Blog\Model\Commentaire;
 class CommentaireDao extends DAO {
 
 
-    public static function create($text,$billet)
+    public static function create($nom,$prenom,$text,$billet)
     {
-        $request=self::getCnx()->prepare("INSERT INTO `commentaire`(`text`, `billet`) VALUES(?,?)");
-        return $request->execute([$text,$billet]);
+        $request=self::getCnx()->prepare("INSERT INTO `commentaire`(`nom`, `prenom`, `text`, `billet`) VALUES(?,?,?,?)");
+        return $request->execute([$nom,$prenom,$text,$billet]);
     }
 
     public static function update($commentaire)
     {
 
-        $request=self::getCnx()->prepare("UPDATE commentaire SET text=?, billet=?,signaler=? WHERE id=?");
-        return $request->execute([$commentaire->getText(),$commentaire->getBillet(),$commentaire->getSignaler(),$commentaire->getId()]);
+        $request=self::getCnx()->prepare("UPDATE commentaire SET nom=?, prenom=?, text=?, billet=?,signaler=? WHERE id=?");
+        return $request->execute([$commentaire->getNom(),$commentaire->getPrenom(),$commentaire->getText(),$commentaire->getBillet(),$commentaire->getSignaler(),$commentaire->getId()]);
     }
 
     public static function delete($id)
@@ -35,7 +35,7 @@ class CommentaireDao extends DAO {
 
         foreach ($result as $value)
         {
-            $commentaire[]=new Commentaire($value["id"],$value["text"],$value["billet"],$value["signaler"]);
+            $commentaire[]=new Commentaire($value["id"],$value["nom"],$value["prenom"],$value["text"],$value["billet"],$value["signaler"]);
         }
 
         return $commentaire;
@@ -59,7 +59,7 @@ class CommentaireDao extends DAO {
 
 
 
-            $commentaire[]=new Commentaire($value["id"],$value["text"],$billet,$value["signaler"]);
+            $commentaire[]=new Commentaire($value["id"],$value["nom"],$value["prenom"],$value["text"],$billet,$value["signaler"]);
         }
 
         return $commentaire;
@@ -71,7 +71,7 @@ class CommentaireDao extends DAO {
         $request->execute([$id]);
         $result=$request->fetch();
 
-        $commentaire=new Commentaire($result["id"],$result["text"],$result["billet"],$result["signaler"]);
+        $commentaire=new Commentaire($result["id"],$result["nom"],$result["prenom"],$result["text"],$result["billet"],$result["signaler"]);
 
         return $commentaire;
     }
@@ -85,7 +85,8 @@ class CommentaireDao extends DAO {
     //Utiliser requete préparer (fail de sécurité ici)
     public function getCommentsFromBillet($id)
     {
-        $request=self::getCnx()->query("SELECT * FROM commentaire WHERE billet=".$id);
+        $request=self::getCnx()->prepare("SELECT * FROM commentaire WHERE billet=?");
+        $request->execute([$id]);
 
         $result=$request->fetchAll();
 
@@ -93,7 +94,7 @@ class CommentaireDao extends DAO {
 
         foreach ($result as $value2)
         {
-            $commentaires[]=new Commentaire($value2["id"],$value2["text"],$value2["billet"],$value2["signaler"]);
+            $commentaires[]=new Commentaire($value2["id"],$value2["nom"],$value2["prenom"],$value2["text"],$value2["billet"],$value2["signaler"]);
         }
         return $commentaires;
     }

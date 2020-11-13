@@ -62,7 +62,7 @@ switch ($path)
         break;
 
         //Commentaire
-    case "/admin/commentaire/create":
+    case "/commentaire/create":
         $controller=new CommentaireController();
         $controller->create();
         break;

@@ -18,12 +18,14 @@
 
             <?php foreach ($billet->getCommentaires() as $com):?>
 
-            <div class="com_wrapper">
+            <div class="com_wrapper border">
                 <div class="card com_card" id="com_card_<?= $billet->getId()?>">
                     <div class="card-body">
-                        <p class="card-text"><?= $com->getText()?></p>
-
-                        <button id="signal" data-id="<?= $com->getId()?>" class="btn btn-danger"><i class="fas fa-exclamation-triangle"></i></button>
+                    <p class="card-text"><?= $com->getText()?></p>
+                        <div>
+                            <span class="text-secondary mr-3"><?= $com->getNom()." ".$com->getPrenom()?></span>
+                            <button id="signal" data-id="<?= $com->getId()?>" class="btn btn-danger"><i class="fas fa-exclamation-triangle"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -35,21 +37,23 @@
 </section>
 
 <section class="form_com">
-    <form>
+    <form action="/commentaire/create" method="POST">
+
+        <input type="hidden" name="billet" value="<?=$billet->getId()?>" />
 
         <div class="form-group">
-            <label for="exampleFormControlInput1">Nom</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Votre nom">
+            <label for="exampleFormControlInput1">Nom <span class="text-danger"> *</span></label>
+            <input name="nom" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Votre nom" required>
         </div>
 
         <div class="form-group">
-            <label for="exampleFormControlInput1">Prénom</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <label for="exampleFormControlInput1">Prénom <span class="text-danger"> *</span></label>
+            <input name="prenom" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Votre prénom" required>
         </div>
 
         <div class="form-group">
-            <label for="exampleFormControlTextarea1">Commentaire</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Ecrivez votre commentaire ici"></textarea>
+            <label for="exampleFormControlTextarea1">Commentaire <span class="text-danger"> *</span></label>
+            <textarea name="text" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Ecrivez votre commentaire ici" required></textarea>
         </div>
             
         <div class="btn-submit">

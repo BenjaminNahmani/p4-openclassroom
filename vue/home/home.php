@@ -11,7 +11,6 @@
 
         <div class="container card_home">
 
-            <?php foreach ($billets as $billet):?>
 
                 <div class="card">
                     <div class="card-body">
@@ -23,7 +22,6 @@
                     </div>
                 </div>
 
-            <?php endforeach;?>
 
         </div>
     </section>

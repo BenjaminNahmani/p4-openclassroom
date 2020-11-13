@@ -14,17 +14,36 @@ class CommentaireController extends Controller
 
     public function create()
     {
-        $this->redirectIfNotConnected();
+       
+        //var_dump($_POST);
+            $erreur="";
 
-        if(isset($_POST["submit"]))
-        {
+            if(empty($_POST["nom"]))
+            {
+                $erreur.=" Le nom est obligatoire";
+            }
 
-            CommentaireDao::create(strip_tags($_POST["text"]),$_POST["billet"]);
-            header("location:liste?id=".$_POST["billet"]);
+            if(empty($_POST["prenom"]))
+            {
+                $erreur.=" Le prenom est obligatoire";
+            }
+
+            if(empty($_POST["text"]))
+            {
+                $erreur.=" Le contenu du commentaire est obligatoire";
+            }
+
+
+
+            if($erreur=="")
+            {
+               $res= CommentaireDao::create(strip_tags($_POST["nom"]),strip_tags($_POST["prenom"]),strip_tags($_POST["text"]),$_POST["billet"]);
+                //var_dump($res);
+            }
+            header("location:/billet?id=".$_POST["billet"]."&error=".$erreur);
             exit;
-        }
 
-        include_once "vue/commentaire/create.php";
+        //include_once "vue/commentaire/create.php";
     }
 
 

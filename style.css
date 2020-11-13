@@ -5,16 +5,12 @@
 /* ---------------------------------- */
 /* ------------- NAVBAR ------------- */
 /* ---------------------------------- */
-header {
-  margin-bottom: 20px;
-}
 #main_logo {
   width: 50px;
   border-radius: 50%;
 }
 
 .navbar {
-  position: fixed;
   width: 100%;
   z-index: 9999;
   top: 0;
@@ -35,7 +31,6 @@ header {
   background: url(image/main_pic.jpg) no-repeat center center;
   background-size: cover;
   margin: 0px;
-  margin-bottom: 25px;
   padding: 2px;
   color: white;
 }
@@ -130,7 +125,7 @@ footer {
   
   #main_pic{
     position: relative;
-    min-height: 975px;
+    min-height: 845px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -161,9 +156,3 @@ footer {
   /* ---------------------------------- */
   /* -------- FORM LOGIN ADMIN -------- */
   /* ---------------------------------- */
- /* .container_login {
-    margin-top: 130px;
-  }
-
-
-}

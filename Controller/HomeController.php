@@ -11,10 +11,10 @@ class HomeController extends Controller
 
     public function index(){
 
-        $billets = BilletDao::listeAndCom();
+        $billet = BilletDao::lastBillet();
 
         $view = new View("home/home");
-        $view->render(["billets"=>$billets]);
+        $view->render(["billet"=>$billet]);
     }
 
 

@@ -10,7 +10,7 @@ class Controller
     {
         if(!isset($_SESSION["admin"]))
         {
-            header("Location: /admin/login");
+            header("Location: /admin/login/");
             exit;
         }
     }

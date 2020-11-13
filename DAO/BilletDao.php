@@ -33,8 +33,8 @@ class BilletDao extends DAO{
 
     public static function liste()
     {
-        $request=self::getCnx()->query("SELECT * FROM billet ");
-
+        $request=self::getCnx()->prepare("SELECT * FROM billet ");
+        $request->execute([]);
         $result=$request->fetchAll();
 
         $billet=[];
@@ -49,8 +49,8 @@ class BilletDao extends DAO{
 
     public static function listeAndCom()
     {
-        $request=self::getCnx()->query("SELECT * FROM billet ");
-
+        $request=self::getCnx()->prepare("SELECT * FROM billet ");
+        $request->execute([]);
         $result=$request->fetchAll();
 
         $billet=[];
@@ -60,6 +60,17 @@ class BilletDao extends DAO{
             $commentDao = new CommentaireDao();
             $billet[]=new Billet($value["id"],$value["name"],$value["text"],$commentDao->getCommentsFromBillet($value['id']));
         }
+
+        return $billet;
+    }
+
+    public static function lastBillet()
+    {
+        $request=self::getCnx()->prepare("SELECT * FROM billet ORDER BY date DESC LIMIT 1");
+        $request->execute([]);
+        $result=$request->fetch();
+
+        $billet=new Billet($result["id"],$result["name"],$result["text"],[]);
 
         return $billet;
     }
