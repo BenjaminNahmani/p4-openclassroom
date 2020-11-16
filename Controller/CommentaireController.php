@@ -74,7 +74,7 @@ class CommentaireController extends Controller
         if(isset($_POST["submit"]))
         {
 
-            $com=new Commentaire($_POST["id"],$_POST["text"],$_POST["billet"],0);
+            $com=new Commentaire($_POST["id"],$_POST["nom"],$_POST["prenom"],$_POST["text"],$_POST["billet"],0);
 
             CommentaireDao::update($com);
             header("location:liste?id=".$_POST["billet"]);

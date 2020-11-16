@@ -17,6 +17,8 @@ class View
         $header=file_get_contents($_SERVER["DOCUMENT_ROOT"]."vue/layout/header.php");
         $footer=file_get_contents($_SERVER["DOCUMENT_ROOT"]."vue/layout/footer.php");
 
+        $headerAdmin=file_get_contents($_SERVER["DOCUMENT_ROOT"]."vue/menu/menu.php");
+
         include_once $_SERVER["DOCUMENT_ROOT"]."vue/".$path.".php";
     }
 }

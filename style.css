@@ -110,6 +110,18 @@ footer {
   align-items: flex-end;
 }
 
+/* ---------------------------------- */
+/*           ADMINISTRATION           */
+/* ---------------------------------- */
+.btn-create{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
 @media screen and (min-width: 500px) {/* TAB */
   
     #main_pic{

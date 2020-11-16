@@ -3,7 +3,8 @@ include_once "vue/menu/menu.php";
 ?>
 
 <form method="post">
-    <input type="text" name="text" class="form-control" placeholder="Mon commentaire..." value="<?php echo $com->getText()?>"/>
+
+    <textarea id="htmlEditor" name="text" placeholder="Contenu"><?php echo $com->getText()?></textarea>
 
     <input type="hidden" name="id" value="<?php echo $_GET["id"]?>">
 

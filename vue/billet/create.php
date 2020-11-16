@@ -1,6 +1,4 @@
-<?php
-include_once "vue/menu/menu.php";
-?>
+<?= $headerAdmin?>
 
 <form method="post">
     <input type="text" name="name" class="form-control" placeholder="Nom"/>
@@ -10,5 +8,6 @@ include_once "vue/menu/menu.php";
     <input type="submit" name="submit" class="btn btn-success"/>
 
 </form>
+<?= $footer?>
 </body>
 </html>

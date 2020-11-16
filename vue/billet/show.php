@@ -21,9 +21,10 @@
             <div class="com_wrapper border">
                 <div class="card com_card" id="com_card_<?= $billet->getId()?>">
                     <div class="card-body">
+                    <span class="text-secondary mr-3"><?= $com->getNom()." ".$com->getPrenom()?></span> 
                     <p class="card-text"><?= $com->getText()?></p>
                         <div>
-                            <span class="text-secondary mr-3"><?= $com->getNom()." ".$com->getPrenom()?></span>
+                            
                             <button id="signal" data-id="<?= $com->getId()?>" class="btn btn-danger"><i class="fas fa-exclamation-triangle"></i></button>
                         </div>
                     </div>
