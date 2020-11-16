@@ -2,6 +2,7 @@
 namespace Blog\DAO;
 
 use Blog\Model\Commentaire;
+use Blog\Model\Billet;
 
 class CommentaireDao extends DAO {
 

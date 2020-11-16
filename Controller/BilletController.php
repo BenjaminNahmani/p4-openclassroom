@@ -16,11 +16,14 @@ class BilletController extends Controller
     {
         $this->redirectIfNotConnected();
 
+        
+
         if(isset($_POST["submit"]))
         {
+            var_dump($_POST);
 
-            BilletDao::create($_POST["name"],$_POST["text"]);
-            header("location:liste");
+             BilletDao::create($_POST["name"],$_POST["text"]);
+             header("location:liste");
             exit;
         }
 

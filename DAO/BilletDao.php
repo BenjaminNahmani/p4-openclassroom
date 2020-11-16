@@ -11,8 +11,8 @@ class BilletDao extends DAO{
 
     public static function create($name,$text)
     {
-        $request=self::getCnx()->prepare("INSERT INTO `billet`( `name`, `text`) VALUES(?,?)");
-        return $request->execute([$name,$text]);
+        $request=self::getCnx()->prepare("INSERT INTO `billet`( `name`, `text`, `date`) VALUES(?,?,?)");
+       return $request->execute([$name,$text,date("Y-m-d")]);
     }
 
     public static function update($billet)

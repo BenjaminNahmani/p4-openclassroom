@@ -6,6 +6,7 @@ namespace Blog\Controller;
 
 use Blog\Framework\Controller;
 use Blog\Framework\View;
+use Blog\DAO\LoginDao;
 
 class LoginController extends Controller
 {
@@ -21,10 +22,11 @@ class LoginController extends Controller
 
         if(isset($_POST["submit"]))
         {
+            $id=LoginDao::login($_POST["user"],$_POST["pwd"]);
 
-            if($_POST["password"]=="1234")
+            if($id)
             {
-                $_SESSION["admin"]=true;
+                $_SESSION["admin"]=$id;
                 header("location:/admin/billet/liste");
                 exit;
 

@@ -31,7 +31,7 @@
                 <a class="nav-link" href="/admin/signaler/liste">Commentaire signalé</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-danger" href="/admin/logout">Déconnexion</a>
+                <a class="nav-link text-danger" href="/admin/logout/">Déconnexion</a>
             </li>
         </ul>
     </div>

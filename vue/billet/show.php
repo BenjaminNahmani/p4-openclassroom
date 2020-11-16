@@ -25,7 +25,7 @@
                     <p class="card-text"><?= $com->getText()?></p>
                         <div>
                             
-                            <button id="signal" data-id="<?= $com->getId()?>" class="btn btn-danger"><i class="fas fa-exclamation-triangle"></i></button>
+                            <button data-id="<?= $com->getId()?>" class="btn btn-danger signal"><i class="fas fa-exclamation-triangle"></i></button>
                         </div>
                     </div>
                 </div>
