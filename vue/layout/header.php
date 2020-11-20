@@ -20,7 +20,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-      <a class="navbar-brand" href="/home"><img src="/image/icon.png" alt="Logo du site" id="main_logo"></a>
+      <a class="navbar-brand" href="/"><img src="/image/icon.png" alt="Logo du site" id="main_logo"></a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,7 +32,7 @@
 
         <div class="navbar-nav">
 
-          <a class="nav-item nav-link active" href="/home" class="button">Episodes</a>
+          <a class="nav-item nav-link active" href="/" class="button">Episodes</a>
 
           <a class="nav-item nav-link" href="/admin/billet/liste" class="button">Administration</a>
         </div>

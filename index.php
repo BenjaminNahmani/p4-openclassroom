@@ -27,14 +27,9 @@ if(isset($_SERVER["REDIRECT_URL"]))
 switch ($path)
 {
     //HOME
-    case "/home":
-
+    case "/":
         $controller=new HomeController();
         $controller->index();
-        break;
-    case "/":
-        header("location:/home");
-        exit;
         break;
 
 

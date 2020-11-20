@@ -1,4 +1,4 @@
-<?= $header?>
+<?= $headerAdmin?>
 
 <form method="post">
     <input type="text" name="name" class="form-control" placeholder="Nom" value='<?= $billet->getName(); ?>'/>

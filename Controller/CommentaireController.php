@@ -37,7 +37,7 @@ class CommentaireController extends Controller
 
             if($erreur=="")
             {
-               $res= CommentaireDao::create(strip_tags($_POST["nom"]),strip_tags($_POST["prenom"]),strip_tags($_POST["text"]),$_POST["billet"]);
+               $res= CommentaireDao::create(htmlspecialchars($_POST["nom"]),htmlspecialchars($_POST["prenom"]),htmlspecialchars($_POST["text"]),$_POST["billet"]);
                 //var_dump($res);
             }
             header("location:/billet?id=".$_POST["billet"]."&error=".$erreur);

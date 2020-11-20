@@ -44,7 +44,7 @@ class LoginController extends Controller
     {
         session_destroy();
 
-        header("Location: /home");
+        header("Location: /");
         exit;
     }
 
