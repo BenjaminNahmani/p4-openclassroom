@@ -32,7 +32,7 @@
 
         <div class="navbar-nav">
 
-          <a class="nav-item nav-link active" href="/" class="button">Episodes</a>
+          <a class="nav-item nav-link active" href="/billet/episodes" class="button">Episodes</a>
 
           <a class="nav-item nav-link" href="/admin/billet/liste" class="button">Administration</a>
         </div>

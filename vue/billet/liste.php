@@ -19,11 +19,11 @@
         <tr>
             <td><?= $b->getId() ?></td>
             <td><?= $b->getName() ?></td>
-            <td style="cursor: pointer" data-toggle="modal" data-target="#exampleModal" class="content-billet" data="<?= $b->getText()?>"><?= strip_tags($b->getText()) ?></td>
+            <td class="card-text content-billet" data-toggle="modal" data-target="#exampleModal"><?= $b->getExcerptText($b->getText())?></p>
             <td>
-                <a href="/admin/commentaire/liste?id=<?= $b->getId() ?>" class="btn btn-info text-light"><i class="fa fa-list"></i></a>
-                <a href="update?id=<?= $b->getId() ?>" class="btn btn-warning text-light"><i class="fa fa-edit"></i></a>
-                <a href="delete?id=<?= $b->getId() ?>" class="btn btn-danger text-light" id="delete"><i class="fa fa-trash"></i></a>
+                <a href="/admin/commentaire/liste?id=<?= $b->getId() ?>" class="btn btn-info text-light"><i class="fa fa-list fa-admin"></i></a>
+                <a href="update?id=<?= $b->getId() ?>" class="btn btn-warning text-light"><i class="fa fa-edit fa-admin"></i></a>
+                <a href="delete?id=<?= $b->getId() ?>" class="btn btn-danger text-light" id="delete"><i class="fa fa-trash fa-admin"></i></a>
             </td>
         </tr>
 

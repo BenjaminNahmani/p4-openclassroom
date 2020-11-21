@@ -17,5 +17,4 @@ class HomeController extends Controller
         $view->render(["billet"=>$billet]);
     }
 
-
 }

@@ -31,6 +31,10 @@ switch ($path)
         $controller=new HomeController();
         $controller->index();
         break;
+    case "/episodes":
+        $controller=new HomeController();
+        $controller->episodes();
+        break;
 
 
 
@@ -50,6 +54,10 @@ switch ($path)
     case "/admin/billet/delete":
         $controller=new BilletController();
         $controller->delete();
+        break;
+    case "/billet/episodes":
+        $controller=new BilletController();
+        $controller->episodes();
         break;
     case "/billet":
         $controller=new BilletController();

@@ -13,7 +13,7 @@
 
                 </div>
             </div>
-
+            
             <h2 id="com_zone_title"> Zone des commentaires</h2>
 
             <?php foreach ($billet->getCommentaires() as $com):?>

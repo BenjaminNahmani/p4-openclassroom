@@ -53,9 +53,6 @@ class BilletController extends Controller
         $view->render(["billets"=>$billets]);
     }
 
-
-
-
     public function update()
     {
         $this->redirectIfNotConnected();
@@ -82,6 +79,15 @@ class BilletController extends Controller
         $view->render(["billet"=>$billet]);
 
     }
+
+    public function episodes(){
+        $billet=BilletDao::liste();
+        $view = new View("billet/episodes");
+        $view->render(["billet"=>$billet]);
+
+    }
+
+    
 
 
 }
