@@ -97,7 +97,7 @@ footer {
 .card {
   height: 100%;
   width: 100%;
-  margin: 10px;
+  padding: 10px;
   border: none;
   color: black;
 }
