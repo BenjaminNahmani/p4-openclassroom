@@ -16,19 +16,22 @@ class BilletController extends Controller
     {
         $this->redirectIfNotConnected();
 
-        
-
+        $error="";
         if(isset($_POST["submit"]))
         {
-            var_dump($_POST);
+        
+            if(!empty($_POST["name"]) && !empty($_POST["text"]))
+            {
+                BilletDao::create(strip_tags($_POST["name"]),preg_replace('#<script(.*?)>(.*?)</script>#is', '',$_POST["text"]));
+                header("location:liste");
+               exit;
+            }
 
-             BilletDao::create($_POST["name"],$_POST["text"]);
-             header("location:liste");
-            exit;
+            $error="Veuillez remplir tout les champs";
         }
 
         $view = new View("billet/create");
-        $view->render();
+        $view->render(["error"=>$error]);
     }
 
     public function delete()
@@ -57,20 +60,25 @@ class BilletController extends Controller
     {
         $this->redirectIfNotConnected();
 
+        $error="";
         if(isset($_POST["submit"]))
         {
+            if(!empty($_POST["name"]) && !empty($_POST["text"]))
+            {
 
-            $billet=new Billet($_POST["id"],$_POST["name"],$_POST["text"]);
+                $billet=new Billet($_POST["id"],$_POST["name"],$_POST["text"]);
 
-            BilletDao::update($billet);
-            header("location:liste");
-            exit;
+                BilletDao::update($billet);
+                header("location:liste");
+                exit;
+            }
+            $error="Veuillez remplir tout les champs";
         }
 
         $billet=BilletDao::get($_GET["id"]);
 
         $view = new View("billet/update");
-        $view->render(["billet"=>$billet]);
+        $view->render(["billet"=>$billet,"error"=>$error]);
     }
 
     public function show(){
